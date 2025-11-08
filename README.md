@@ -33,6 +33,15 @@ python analyze.py
 
 This creates charts showing where your EnergyPlus results sit within the acceptable range defined by BSIMAC, CSE, DeST, ESP-r, NewHASP, and TRNSYS.
 
+**Visualize results:**
+```bash
+python view.py
+```
+
+This displays the validation charts and analysis plots for easy viewing.
+
+![BESTEST Case 600 Visualization](results_analysis/view.png)
+
 Expected results:
 - Annual heating: ~4.3 MWh (range 4.0-4.5 MWh)
 - Annual cooling: ~6.3 MWh (range 5.7-6.6 MWh)
