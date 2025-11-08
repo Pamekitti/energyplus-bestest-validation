@@ -1,0 +1,32 @@
+variant,param_group,param_name,value,description,annual_heating_load,annual_sensible_cooling_load
+base,baseline,Base Case,default,Original Case 600 configuration,4.254663970956235,6.300600637968414
+1a,timestep,Timestep (steps/hour),1 step/hr,Timestep: 1 step/hour,3.9770920409216735,6.007271522106877
+1b,timestep,Timestep (steps/hour),6 steps/hr,Timestep: 6 steps/hour,4.2797803022191605,6.331320340630516
+2a,shadow_freq,Shadow Frequency (days),7 days,Shadow calc frequency: 7 days,4.2554774808144655,6.304585787304736
+1c,timestep,Timestep (steps/hour),10 steps/hr,Timestep: 10 steps/hour,4.296896398006221,6.351863916569046
+2b,shadow_freq,Shadow Frequency (days),20 days,Shadow calc frequency: 20 days,4.256304585016073,6.303214482110724
+2c,shadow_freq,Shadow Frequency (days),30 days,Shadow calc frequency: 30 days,4.259008602281679,6.297665899717233
+1d,timestep,Timestep (steps/hour),20 steps/hr,Timestep: 20 steps/hour,4.308977633715659,6.366118441983216
+4a,shadow_calc,Shadow Calculation,Timestep Update,Shadow update: Timestep,4.254663970956235,6.300600637968414
+5a,solar_dist,Solar Distribution,MinimalShadowing,Solar: MinimalShadowing,4.253003076153579,6.31970298002016
+5b,solar_dist,Solar Distribution,FullExterior,Solar: FullExterior,4.253003076153579,6.31970298002016
+6a,terrain,Terrain Type,Suburbs,Terrain: Suburbs,4.229358299940585,6.653095227025617
+5c,solar_dist,Solar Distribution,FullExt+Reflections,Solar: FullExtWithReflections,4.263822114087906,6.234754657455315
+6b,terrain,Terrain Type,City,Terrain: City,4.220881414807815,7.051224980800727
+7a,convergence,Convergence Tolerances,Loads: 0.01W,Loads tolerance: 0.01W,4.254663970956235,6.300600637968414
+7b,convergence,Convergence Tolerances,Loads: 0.1W,Loads tolerance: 0.1W,4.254663970956235,6.300600637968414
+8a,convergence,Convergence Tolerances,Temp: 0.2C,Temp tolerance: 0.2C,4.254663970956235,6.300600637968414
+8b,convergence,Convergence Tolerances,Temp: 0.5C,Temp tolerance: 0.5C,4.254663970956235,6.300600637968414
+9a,warmup,Warmup Days,Max: 15,Max warmup: 15 days,4.254663970956235,6.300600637968414
+9b,warmup,Warmup Days,Max: 40,Max warmup: 40 days,4.254663970956235,6.300600637968414
+10a,warmup,Warmup Days,Min: 3,Min warmup: 3 days,4.254663970956235,6.300600637968417
+10b,warmup,Warmup Days,Min: 10,Min warmup: 10 days,4.254663970956236,6.300600637968414
+12a,inside_conv,Inside Convection Algorithm,Simple,Inside convection: Simple,4.667036017868724,6.530532366259619
+12b,inside_conv,Inside Convection Algorithm,CeilingDiffuser,Inside convection: CeilingDiffuser,4.778127884992007,7.340677215248964
+12c,inside_conv,Inside Convection Algorithm,Adaptive,Inside convection: AdaptiveConvectionAlgorithm,3.9570918525945635,5.880276527859649
+13a,outside_conv,Outside Convection Algorithm,SimpleCombined,Outside convection: SimpleCombined,4.167015573162144,5.9585245645709675
+13b,outside_conv,Outside Convection Algorithm,TARP,Outside convection: TARP,4.258010627104124,6.619761066010695
+13c,outside_conv,Outside Convection Algorithm,MoWiTT,Outside convection: MoWiTT,4.272791755579631,6.653292594855446
+13d,outside_conv,Outside Convection Algorithm,Adaptive,Outside convection: AdaptiveConvectionAlgorithm,4.194481231616664,6.363267310286916
+11a,heat_balance,Heat Balance Algorithm,ConductionFiniteDiff,Heat balance: ConductionFiniteDifference,4.313620520853424,6.371338989081535
+3a,shadow_calc,Shadow Calculation,PixelCounting,Shadow method: PixelCounting,4.254670488891267,6.30047813272189

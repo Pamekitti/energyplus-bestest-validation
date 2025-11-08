@@ -1,0 +1,1432 @@
+{
+    "metadata": {
+      "title": "BESTEST Case 600 and 600FF Complete Reference Data",
+      "description": "Building Energy Simulation Test reference results",
+      "reference_tools": ["BSIMAC", "CSE", "DeST", "EnergyPlus", "ESP-r", "NewHASP", "TRNSYS"],
+      "cases": ["600", "600FF"]
+    },
+    
+    "metrics": {
+      "annual_heating_load": {
+        "case": "600",
+        "unit": "MWh",
+        "category": "annual_loads",
+        "type": "total",
+        "required_output": true,
+        "reference_values": {
+          "BSIMAC": 4.050,
+          "CSE": 3.993,
+          "DeST": 4.047,
+          "EnergyPlus": 4.324,
+          "ESP-r": 4.362,
+          "NewHASP": 4.444,
+          "TRNSYS": 4.504
+        },
+        "statistics": {
+          "min": 3.993,
+          "max": 4.504,
+          "mean": 4.246,
+          "range_percent": 12.0
+        }
+      },
+      
+      "annual_sensible_cooling_load": {
+        "case": "600",
+        "unit": "MWh",
+        "category": "annual_loads",
+        "type": "total",
+        "required_output": true,
+        "reference_values": {
+          "BSIMAC": 5.822,
+          "CSE": 5.913,
+          "DeST": 5.432,
+          "EnergyPlus": 6.027,
+          "ESP-r": 6.162,
+          "NewHASP": 6.976,
+          "TRNSYS": 5.780
+        },
+        "statistics": {
+          "min": 5.432,
+          "max": 6.976,
+          "mean": 6.016,
+          "range_percent": 25.7
+        }
+      },
+      
+      "peak_heating_load": {
+        "case": "600",
+        "unit": "kW",
+        "category": "annual_peak_loads",
+        "type": "peak_with_time",
+        "required_output": true,
+        "reference_values": {
+          "BSIMAC": {
+            "value": 3.255,
+            "month": "Nov",
+            "day": 26,
+            "hour": 8
+          },
+          "CSE": {
+            "value": 3.020,
+            "month": "Jan",
+            "day": 1,
+            "hour": 1
+          },
+          "DeST": {
+            "value": 3.035,
+            "month": "Jan",
+            "day": 1,
+            "hour": 0
+          },
+          "EnergyPlus": {
+            "value": 3.204,
+            "month": "Dec",
+            "day": 31,
+            "hour": 24
+          },
+          "ESP-r": {
+            "value": 3.228,
+            "month": "Jan",
+            "day": 1,
+            "hour": 1
+          },
+          "NewHASP": {
+            "value": 3.173,
+            "month": "Jan",
+            "day": 1,
+            "hour": 1
+          },
+          "TRNSYS": {
+            "value": 3.359,
+            "month": "Jan",
+            "day": 1,
+            "hour": 1
+          }
+        },
+        "statistics": {
+          "min": 3.020,
+          "max": 3.359,
+          "mean": 3.182,
+          "range_percent": 10.6
+        }
+      },
+      
+      "peak_sensible_cooling_load": {
+        "case": "600",
+        "unit": "kW",
+        "category": "annual_peak_loads",
+        "type": "peak_with_time",
+        "required_output": true,
+        "reference_values": {
+          "BSIMAC": {
+            "value": 5.650,
+            "month": "Jan",
+            "day": 22,
+            "hour": 15
+          },
+          "CSE": {
+            "value": 6.481,
+            "month": "Jan",
+            "day": 22,
+            "hour": 14
+          },
+          "DeST": {
+            "value": 5.422,
+            "month": "Jan",
+            "day": 22,
+            "hour": 14
+          },
+          "EnergyPlus": {
+            "value": 6.352,
+            "month": "Jan",
+            "day": 22,
+            "hour": 14
+          },
+          "ESP-r": {
+            "value": 6.193,
+            "month": "Jan",
+            "day": 22,
+            "hour": 14
+          },
+          "NewHASP": {
+            "value": 6.835,
+            "month": "Jan",
+            "day": 22,
+            "hour": 14
+          },
+          "TRNSYS": {
+            "value": 6.046,
+            "month": "Jan",
+            "day": 22,
+            "hour": 14
+          }
+        },
+        "statistics": {
+          "min": 5.422,
+          "max": 6.835,
+          "mean": 6.140,
+          "range_percent": 23.0
+        }
+      },
+      
+      "annual_incident_solar_horizontal": {
+        "case": "600",
+        "unit": "kWh/m2",
+        "category": "solar_radiation",
+        "type": "total",
+        "required_output": true,
+        "reference_values": {
+          "BSIMAC": 1670,
+          "CSE": 1663,
+          "DeST": 1667,
+          "EnergyPlus": 1664,
+          "ESP-r": 1665,
+          "TRNSYS": 1669
+        },
+        "statistics": {
+          "min": 1663,
+          "max": 1670,
+          "mean": 1666,
+          "range_percent": 0.4
+        }
+      },
+      
+      "annual_incident_solar_north": {
+        "case": "600",
+        "unit": "kWh/m2",
+        "category": "solar_radiation",
+        "type": "total",
+        "required_output": true,
+        "reference_values": {
+          "BSIMAC": 453,
+          "CSE": 399,
+          "DeST": 477,
+          "EnergyPlus": 438,
+          "ESP-r": 432,
+          "TRNSYS": 440
+        },
+        "statistics": {
+          "min": 399,
+          "max": 477,
+          "mean": 440,
+          "range_percent": 17.8
+        }
+      },
+      
+      "annual_incident_solar_east": {
+        "case": "600",
+        "unit": "kWh/m2",
+        "category": "solar_radiation",
+        "type": "total",
+        "required_output": true,
+        "reference_values": {
+          "BSIMAC": 1061,
+          "CSE": 1027,
+          "DeST": 1017,
+          "EnergyPlus": 1062,
+          "ESP-r": 1054,
+          "TRNSYS": 1068
+        },
+        "statistics": {
+          "min": 1017,
+          "max": 1068,
+          "mean": 1048,
+          "range_percent": 4.9
+        }
+      },
+      
+      "annual_incident_solar_south": {
+        "case": "600",
+        "unit": "kWh/m2",
+        "category": "solar_radiation",
+        "type": "total",
+        "required_output": true,
+        "reference_values": {
+          "BSIMAC": 1387,
+          "CSE": 1317,
+          "DeST": 1291,
+          "EnergyPlus": 1370,
+          "ESP-r": 1363,
+          "TRNSYS": 1384
+        },
+        "statistics": {
+          "min": 1291,
+          "max": 1387,
+          "mean": 1352,
+          "range_percent": 7.1
+        }
+      },
+      
+      "annual_incident_solar_west": {
+        "case": "600",
+        "unit": "kWh/m2",
+        "category": "solar_radiation",
+        "type": "total",
+        "required_output": true,
+        "reference_values": {
+          "BSIMAC": 997,
+          "CSE": 903,
+          "DeST": 906,
+          "EnergyPlus": 967,
+          "ESP-r": 961,
+          "TRNSYS": 974
+        },
+        "statistics": {
+          "min": 903,
+          "max": 997,
+          "mean": 951,
+          "range_percent": 9.9
+        }
+      },
+      
+      "annual_transmitted_solar_south": {
+        "case": "600",
+        "unit": "kWh/m2",
+        "category": "solar_radiation",
+        "type": "total",
+        "required_output": true,
+        "reference_values": {
+          "BSIMAC": 820,
+          "CSE": 826,
+          "DeST": 805,
+          "EnergyPlus": 804,
+          "ESP-r": 814,
+          "TRNSYS": 823
+        },
+        "statistics": {
+          "min": 804,
+          "max": 826,
+          "mean": 815,
+          "range_percent": 2.6
+        }
+      },
+      
+      "transmissivity_coefficient_south": {
+        "case": "600",
+        "unit": "dimensionless",
+        "category": "solar_radiation",
+        "type": "total",
+        "required_output": false,
+        "reference_values": {
+          "BSIMAC": 0.591,
+          "CSE": 0.627,
+          "DeST": 0.624,
+          "EnergyPlus": 0.587,
+          "ESP-r": 0.597,
+          "TRNSYS": 0.594
+        },
+        "statistics": {
+          "min": 0.587,
+          "max": 0.627,
+          "mean": 0.603,
+          "range_percent": 6.7
+        }
+      },
+      
+      "sky_temperature_average": {
+        "case": "600",
+        "unit": "°C",
+        "category": "sky_temperature",
+        "type": "total",
+        "required_output": false,
+        "reference_values": {
+          "CSE": -3.9,
+          "DeST": -5.9,
+          "EnergyPlus": -2.0,
+          "ESP-r": -5.2,
+          "TRNSYS": -5.1
+        },
+        "statistics": {
+          "min": -5.9,
+          "max": -2.0,
+          "mean": -4.7,
+          "range_percent": 83.2
+        }
+      },
+      
+      "sky_temperature_minimum": {
+        "case": "600",
+        "unit": "°C",
+        "category": "sky_temperature",
+        "type": "peak_with_time",
+        "required_output": false,
+        "reference_values": {
+          "CSE": {
+            "value": -46.2,
+            "month": "Dec",
+            "day": 31,
+            "hour": 24
+          },
+          "DeST": {
+            "value": -46.9,
+            "month": "Dec",
+            "day": 31,
+            "hour": 23
+          },
+          "EnergyPlus": {
+            "value": -38.0,
+            "month": "Dec",
+            "day": 31,
+            "hour": 24
+          },
+          "ESP-r": {
+            "value": -46.9,
+            "month": "Dec",
+            "day": 31,
+            "hour": 23
+          },
+          "TRNSYS": {
+            "value": -46.2,
+            "month": "Dec",
+            "day": 31,
+            "hour": 24
+          }
+        },
+        "statistics": {
+          "min": -46.9,
+          "max": -38.0,
+          "mean": -45.2,
+          "range_percent": 19.8
+        }
+      },
+      
+      "sky_temperature_maximum": {
+        "case": "600",
+        "unit": "°C",
+        "category": "sky_temperature",
+        "type": "peak_with_time",
+        "required_output": false,
+        "reference_values": {
+          "CSE": {
+            "value": 30.1,
+            "month": "Jun",
+            "day": 13,
+            "hour": 15
+          },
+          "DeST": {
+            "value": 24.6,
+            "month": "Aug",
+            "day": 4,
+            "hour": 15
+          },
+          "EnergyPlus": {
+            "value": 24.7,
+            "month": "Aug",
+            "day": 4,
+            "hour": 16
+          },
+          "ESP-r": {
+            "value": 26.7,
+            "month": "Aug",
+            "day": 4,
+            "hour": 15
+          },
+          "TRNSYS": {
+            "value": 26.0,
+            "month": "Jun",
+            "day": 13,
+            "hour": 18
+          }
+        },
+        "statistics": {
+          "min": 24.6,
+          "max": 30.1,
+          "mean": 26.1,
+          "range_percent": 20.9
+        }
+      },
+      
+      "free_float_max_temperature": {
+        "case": "600FF",
+        "unit": "°C",
+        "category": "free_float_temperatures",
+        "type": "peak_with_time",
+        "required_output": true,
+        "reference_values": {
+          "BSIMAC": {
+            "value": 63.4,
+            "month": "Oct",
+            "day": 18,
+            "hour": 17
+          },
+          "CSE": {
+            "value": 68.4,
+            "month": "Oct",
+            "day": 1,
+            "hour": 16
+          },
+          "DeST": {
+            "value": 65.0,
+            "month": "Oct",
+            "day": 11,
+            "hour": 15
+          },
+          "EnergyPlus": {
+            "value": 63.8,
+            "month": "Oct",
+            "day": 18,
+            "hour": 16
+          },
+          "ESP-r": {
+            "value": 64.6,
+            "month": "Oct",
+            "day": 1,
+            "hour": 16
+          },
+          "NewHASP": {
+            "value": 66.9,
+            "month": "Oct",
+            "day": 1,
+            "hour": 16
+          },
+          "TRNSYS": {
+            "value": 62.4,
+            "month": "Oct",
+            "day": 1,
+            "hour": 15
+          }
+        },
+        "statistics": {
+          "min": 62.4,
+          "max": 68.4,
+          "mean": 64.9,
+          "range_percent": 9.2
+        }
+      },
+      
+      "free_float_min_temperature": {
+        "case": "600FF",
+        "unit": "°C",
+        "category": "free_float_temperatures",
+        "type": "peak_with_time",
+        "required_output": true,
+        "reference_values": {
+          "BSIMAC": {
+            "value": -9.9,
+            "month": "Nov",
+            "day": 26,
+            "hour": 8
+          },
+          "CSE": {
+            "value": -12.9,
+            "month": "Feb",
+            "day": 9,
+            "hour": 7
+          },
+          "DeST": {
+            "value": -13.5,
+            "month": "Feb",
+            "day": 9,
+            "hour": 6
+          },
+          "EnergyPlus": {
+            "value": -12.6,
+            "month": "Feb",
+            "day": 9,
+            "hour": 7
+          },
+          "ESP-r": {
+            "value": -13.5,
+            "month": "Feb",
+            "day": 9,
+            "hour": 7
+          },
+          "NewHASP": {
+            "value": -12.3,
+            "month": "Feb",
+            "day": 9,
+            "hour": 7
+          },
+          "TRNSYS": {
+            "value": -13.8,
+            "month": "Feb",
+            "day": 9,
+            "hour": 7
+          }
+        },
+        "statistics": {
+          "min": -13.8,
+          "max": -9.9,
+          "mean": -12.6,
+          "range_percent": 31.2
+        }
+      },
+      
+      "free_float_mean_temperature": {
+        "case": "600FF",
+        "unit": "°C",
+        "category": "free_float_temperatures",
+        "type": "total",
+        "required_output": true,
+        "reference_values": {
+          "BSIMAC": 26.1,
+          "CSE": 25.6,
+          "DeST": 25.3,
+          "EnergyPlus": 24.9,
+          "ESP-r": 25.3,
+          "NewHASP": 26.7,
+          "TRNSYS": 24.3
+        },
+        "statistics": {
+          "min": 24.3,
+          "max": 26.7,
+          "mean": 25.4,
+          "range_percent": 9.4
+        }
+      }
+    },
+    
+    "monthly_data": {
+      "heating_loads": {
+        "case": "600",
+        "unit": "kWh",
+        "category": "monthly_loads",
+        "required_output": false,
+        "months": {
+          "january": {
+            "reference_values": {
+              "BSIMAC": 664.0,
+              "CSE": 655.6,
+              "DeST": 672.7,
+              "EnergyPlus": 711.9,
+              "ESP-r": 732.0,
+              "NewHASP": 733.3,
+              "TRNSYS": 734.9
+            },
+            "statistics": {
+              "min": 655.6,
+              "max": 734.9,
+              "mean": 700.6,
+              "range_percent": 11.3
+            }
+          },
+          "february": {
+            "reference_values": {
+              "BSIMAC": 653.3,
+              "CSE": 626.3,
+              "DeST": 635.3,
+              "EnergyPlus": 682.6,
+              "ESP-r": 682.0,
+              "NewHASP": 686.3,
+              "TRNSYS": 702.1
+            },
+            "statistics": {
+              "min": 626.3,
+              "max": 702.1,
+              "mean": 666.8,
+              "range_percent": 11.4
+            }
+          },
+          "march": {
+            "reference_values": {
+              "BSIMAC": 433.5,
+              "CSE": 435.7,
+              "DeST": 450.5,
+              "EnergyPlus": 472.2,
+              "ESP-r": 481.0,
+              "NewHASP": 487.6,
+              "TRNSYS": 495.0
+            },
+            "statistics": {
+              "min": 433.5,
+              "max": 495.0,
+              "mean": 465.1,
+              "range_percent": 13.2
+            }
+          },
+          "april": {
+            "reference_values": {
+              "BSIMAC": 511.0,
+              "CSE": 457.0,
+              "DeST": 448.0,
+              "EnergyPlus": 510.1,
+              "ESP-r": 479.0,
+              "NewHASP": 491.1,
+              "TRNSYS": 517.3
+            },
+            "statistics": {
+              "min": 448.0,
+              "max": 517.3,
+              "mean": 487.6,
+              "range_percent": 14.2
+            }
+          },
+          "may": {
+            "reference_values": {
+              "BSIMAC": 112.8,
+              "CSE": 127.8,
+              "DeST": 128.0,
+              "EnergyPlus": 136.8,
+              "ESP-r": 139.0,
+              "NewHASP": 145.5,
+              "TRNSYS": 150.7
+            },
+            "statistics": {
+              "min": 112.8,
+              "max": 150.7,
+              "mean": 134.4,
+              "range_percent": 28.3
+            }
+          },
+          "june": {
+            "reference_values": {
+              "BSIMAC": 2.7,
+              "CSE": 11.7,
+              "DeST": 11.2,
+              "EnergyPlus": 10.1,
+              "ESP-r": 14.0,
+              "NewHASP": 13.6,
+              "TRNSYS": 16.0
+            },
+            "statistics": {
+              "min": 2.7,
+              "max": 16.0,
+              "mean": 11.3,
+              "range_percent": 116.6
+            }
+          },
+          "july": {
+            "reference_values": {
+              "BSIMAC": 4.8,
+              "CSE": 11.5,
+              "DeST": 10.1,
+              "EnergyPlus": 12.0,
+              "ESP-r": 14.0,
+              "NewHASP": 13.3,
+              "TRNSYS": 16.7
+            },
+            "statistics": {
+              "min": 4.8,
+              "max": 16.7,
+              "mean": 11.8,
+              "range_percent": 100.9
+            }
+          },
+          "august": {
+            "reference_values": {
+              "BSIMAC": 1.4,
+              "CSE": 6.9,
+              "DeST": 8.4,
+              "EnergyPlus": 6.6,
+              "ESP-r": 9.0,
+              "NewHASP": 9.8,
+              "TRNSYS": 9.6
+            },
+            "statistics": {
+              "min": 1.4,
+              "max": 9.8,
+              "mean": 7.4,
+              "range_percent": 114.2
+            }
+          },
+          "september": {
+            "reference_values": {
+              "BSIMAC": 51.8,
+              "CSE": 74.3,
+              "DeST": 76.7,
+              "EnergyPlus": 73.3,
+              "ESP-r": 81.0,
+              "NewHASP": 89.1,
+              "TRNSYS": 84.8
+            },
+            "statistics": {
+              "min": 51.8,
+              "max": 89.1,
+              "mean": 75.9,
+              "range_percent": 49.2
+            }
+          },
+          "october": {
+            "reference_values": {
+              "BSIMAC": 317.0,
+              "CSE": 328.4,
+              "DeST": 324.1,
+              "EnergyPlus": 347.7,
+              "ESP-r": 354.0,
+              "NewHASP": 370.1,
+              "TRNSYS": 367.1
+            },
+            "statistics": {
+              "min": 317.0,
+              "max": 370.1,
+              "mean": 344.0,
+              "range_percent": 15.4
+            }
+          },
+          "november": {
+            "reference_values": {
+              "BSIMAC": 598.7,
+              "CSE": 575.6,
+              "DeST": 585.8,
+              "EnergyPlus": 625.3,
+              "ESP-r": 629.0,
+              "NewHASP": 647.9,
+              "TRNSYS": 645.8
+            },
+            "statistics": {
+              "min": 575.6,
+              "max": 647.9,
+              "mean": 615.4,
+              "range_percent": 11.8
+            }
+          },
+          "december": {
+            "reference_values": {
+              "BSIMAC": 698.7,
+              "CSE": 682.0,
+              "DeST": 697.8,
+              "EnergyPlus": 735.7,
+              "ESP-r": 750.0,
+              "NewHASP": 756.6,
+              "TRNSYS": 763.5
+            },
+            "statistics": {
+              "min": 682.0,
+              "max": 763.5,
+              "mean": 726.3,
+              "range_percent": 11.2
+            }
+          }
+        }
+      },
+      
+      "cooling_loads": {
+        "case": "600",
+        "unit": "kWh",
+        "category": "monthly_loads",
+        "required_output": false,
+        "months": {
+          "january": {
+            "reference_values": {
+              "BSIMAC": 475.4,
+              "CSE": 554.0,
+              "DeST": 417.9,
+              "EnergyPlus": 521.8,
+              "ESP-r": 523.0,
+              "NewHASP": 580.9,
+              "TRNSYS": 495.0
+            },
+            "statistics": {
+              "min": 417.9,
+              "max": 580.9,
+              "mean": 509.7,
+              "range_percent": 32.0
+            }
+          },
+          "february": {
+            "reference_values": {
+              "BSIMAC": 349.2,
+              "CSE": 394.3,
+              "DeST": 315.4,
+              "EnergyPlus": 387.5,
+              "ESP-r": 398.0,
+              "NewHASP": 450.4,
+              "TRNSYS": 367.4
+            },
+            "statistics": {
+              "min": 315.4,
+              "max": 450.4,
+              "mean": 380.3,
+              "range_percent": 35.5
+            }
+          },
+          "march": {
+            "reference_values": {
+              "BSIMAC": 450.3,
+              "CSE": 474.4,
+              "DeST": 410.7,
+              "EnergyPlus": 484.4,
+              "ESP-r": 489.0,
+              "NewHASP": 594.4,
+              "TRNSYS": 457.4
+            },
+            "statistics": {
+              "min": 410.7,
+              "max": 594.4,
+              "mean": 480.1,
+              "range_percent": 38.3
+            }
+          },
+          "april": {
+            "reference_values": {
+              "BSIMAC": 218.7,
+              "CSE": 220.1,
+              "DeST": 230.2,
+              "EnergyPlus": 240.5,
+              "ESP-r": 263.0,
+              "NewHASP": 343.7,
+              "TRNSYS": 235.4
+            },
+            "statistics": {
+              "min": 218.7,
+              "max": 343.7,
+              "mean": 250.2,
+              "range_percent": 50.0
+            }
+          },
+          "may": {
+            "reference_values": {
+              "BSIMAC": 342.7,
+              "CSE": 321.2,
+              "DeST": 338.6,
+              "EnergyPlus": 339.9,
+              "ESP-r": 364.0,
+              "NewHASP": 461.1,
+              "TRNSYS": 325.2
+            },
+            "statistics": {
+              "min": 321.2,
+              "max": 461.1,
+              "mean": 356.1,
+              "range_percent": 39.3
+            }
+          },
+          "june": {
+            "reference_values": {
+              "BSIMAC": 578.3,
+              "CSE": 497.4,
+              "DeST": 526.4,
+              "EnergyPlus": 539.6,
+              "ESP-r": 550.0,
+              "NewHASP": 636.0,
+              "TRNSYS": 516.1
+            },
+            "statistics": {
+              "min": 497.4,
+              "max": 636.0,
+              "mean": 549.1,
+              "range_percent": 25.2
+            }
+          },
+          "july": {
+            "reference_values": {
+              "BSIMAC": 568.4,
+              "CSE": 505.9,
+              "DeST": 525.1,
+              "EnergyPlus": 536.4,
+              "ESP-r": 556.0,
+              "NewHASP": 635.0,
+              "TRNSYS": 514.4
+            },
+            "statistics": {
+              "min": 505.9,
+              "max": 635.0,
+              "mean": 548.7,
+              "range_percent": 23.5
+            }
+          },
+          "august": {
+            "reference_values": {
+              "BSIMAC": 658.2,
+              "CSE": 606.5,
+              "DeST": 621.1,
+              "EnergyPlus": 648.5,
+              "ESP-r": 674.0,
+              "NewHASP": 739.8,
+              "TRNSYS": 634.1
+            },
+            "statistics": {
+              "min": 606.5,
+              "max": 739.8,
+              "mean": 654.6,
+              "range_percent": 20.4
+            }
+          },
+          "september": {
+            "reference_values": {
+              "BSIMAC": 724.8,
+              "CSE": 705.2,
+              "DeST": 672.1,
+              "EnergyPlus": 733.7,
+              "ESP-r": 743.0,
+              "NewHASP": 796.7,
+              "TRNSYS": 710.5
+            },
+            "statistics": {
+              "min": 672.1,
+              "max": 796.7,
+              "mean": 726.6,
+              "range_percent": 17.2
+            }
+          },
+          "october": {
+            "reference_values": {
+              "BSIMAC": 628.4,
+              "CSE": 676.1,
+              "DeST": 611.1,
+              "EnergyPlus": 675.3,
+              "ESP-r": 681.0,
+              "NewHASP": 729.5,
+              "TRNSYS": 649.5
+            },
+            "statistics": {
+              "min": 611.1,
+              "max": 729.5,
+              "mean": 664.4,
+              "range_percent": 17.8
+            }
+          },
+          "november": {
+            "reference_values": {
+              "BSIMAC": 394.3,
+              "CSE": 454.7,
+              "DeST": 377.1,
+              "EnergyPlus": 437.7,
+              "ESP-r": 444.0,
+              "NewHASP": 480.9,
+              "TRNSYS": 418.6
+            },
+            "statistics": {
+              "min": 377.1,
+              "max": 480.9,
+              "mean": 429.6,
+              "range_percent": 24.1
+            }
+          },
+          "december": {
+            "reference_values": {
+              "BSIMAC": 433.3,
+              "CSE": 503.3,
+              "DeST": 386.2,
+              "EnergyPlus": 481.9,
+              "ESP-r": 476.0,
+              "NewHASP": 527.7,
+              "TRNSYS": 456.1
+            },
+            "statistics": {
+              "min": 386.2,
+              "max": 527.7,
+              "mean": 466.4,
+              "range_percent": 30.3
+            }
+          }
+        }
+      },
+      
+      "peak_heating_loads": {
+        "case": "600",
+        "unit": "kW",
+        "category": "monthly_peak_loads",
+        "required_output": false,
+        "months": {
+          "january": {
+            "reference_values": {
+              "BSIMAC": {"value": 3.100, "day": 29, "hour": 7},
+              "CSE": {"value": 3.020, "day": 1, "hour": 1},
+              "DeST": {"value": 3.036, "day": 1, "hour": 0},
+              "EnergyPlus": {"value": 2.978, "day": 1, "hour": 3},
+              "ESP-r": {"value": 3.230, "day": 1, "hour": 1},
+              "NewHASP": {"value": 3.173, "day": 1, "hour": 1},
+              "TRNSYS": {"value": 3.359, "day": 1, "hour": 1}
+            },
+            "statistics": {
+              "min": 2.978,
+              "max": 3.359,
+              "mean": 3.128,
+              "range_percent": 12.2
+            }
+          },
+          "february": {
+            "reference_values": {
+              "BSIMAC": {"value": 3.041, "day": 9, "hour": 7},
+              "CSE": {"value": 2.900, "day": 9, "hour": 6},
+              "DeST": {"value": 2.922, "day": 9, "hour": 5},
+              "EnergyPlus": {"value": 3.067, "day": 9, "hour": 6},
+              "ESP-r": {"value": 3.140, "day": 9, "hour": 6},
+              "NewHASP": {"value": 2.942, "day": 9, "hour": 3},
+              "TRNSYS": {"value": 3.225, "day": 9, "hour": 6}
+            },
+            "statistics": {
+              "min": 2.900,
+              "max": 3.225,
+              "mean": 3.034,
+              "range_percent": 10.7
+            }
+          },
+          "march": {
+            "reference_values": {
+              "BSIMAC": {"value": 2.275, "day": 2, "hour": 7},
+              "CSE": {"value": 2.034, "day": 17, "hour": 6},
+              "DeST": {"value": 2.065, "day": 17, "hour": 5},
+              "EnergyPlus": {"value": 2.115, "day": 17, "hour": 6},
+              "ESP-r": {"value": 2.230, "day": 17, "hour": 6},
+              "NewHASP": {"value": 2.078, "day": 17, "hour": 6},
+              "TRNSYS": {"value": 2.287, "day": 17, "hour": 6}
+            },
+            "statistics": {
+              "min": 2.034,
+              "max": 2.287,
+              "mean": 2.155,
+              "range_percent": 11.7
+            }
+          },
+          "april": {
+            "reference_values": {
+              "BSIMAC": {"value": 2.446, "day": 3, "hour": 6},
+              "CSE": {"value": 2.207, "day": 11, "hour": 6},
+              "DeST": {"value": 2.238, "day": 11, "hour": 5},
+              "EnergyPlus": {"value": 2.322, "day": 11, "hour": 5},
+              "ESP-r": {"value": 2.380, "day": 11, "hour": 6},
+              "NewHASP": {"value": 2.285, "day": 11, "hour": 5},
+              "TRNSYS": {"value": 2.457, "day": 11, "hour": 6}
+            },
+            "statistics": {
+              "min": 2.207,
+              "max": 2.457,
+              "mean": 2.334,
+              "range_percent": 10.7
+            }
+          },
+          "may": {
+            "reference_values": {
+              "BSIMAC": {"value": 1.645, "day": 3, "hour": 5},
+              "CSE": {"value": 1.592, "day": 1, "hour": 5},
+              "DeST": {"value": 1.569, "day": 1, "hour": 4},
+              "EnergyPlus": {"value": 1.624, "day": 1, "hour": 5},
+              "ESP-r": {"value": 1.750, "day": 1, "hour": 5},
+              "NewHASP": {"value": 1.608, "day": 1, "hour": 5},
+              "TRNSYS": {"value": 1.778, "day": 1, "hour": 5}
+            },
+            "statistics": {
+              "min": 1.569,
+              "max": 1.778,
+              "mean": 1.652,
+              "range_percent": 12.6
+            }
+          },
+          "june": {
+            "reference_values": {
+              "BSIMAC": {"value": 0.805, "day": 9, "hour": 5},
+              "CSE": {"value": 0.778, "day": 9, "hour": 5},
+              "DeST": {"value": 0.748, "day": 9, "hour": 4},
+              "EnergyPlus": {"value": 0.732, "day": 9, "hour": 5},
+              "ESP-r": {"value": 0.760, "day": 10, "hour": 5},
+              "NewHASP": {"value": 0.883, "day": 9, "hour": 5},
+              "TRNSYS": {"value": 0.853, "day": 9, "hour": 5}
+            },
+            "statistics": {
+              "min": 0.732,
+              "max": 0.883,
+              "mean": 0.794,
+              "range_percent": 19.0
+            }
+          },
+          "july": {
+            "reference_values": {
+              "BSIMAC": {"value": 0.599, "day": 25, "hour": 6},
+              "CSE": {"value": 0.540, "day": 26, "hour": 5},
+              "DeST": {"value": 0.512, "day": 26, "hour": 4},
+              "EnergyPlus": {"value": 0.514, "day": 26, "hour": 5},
+              "ESP-r": {"value": 0.570, "day": 26, "hour": 5},
+              "NewHASP": {"value": 0.586, "day": 26, "hour": 5},
+              "TRNSYS": {"value": 0.619, "day": 26, "hour": 5}
+            },
+            "statistics": {
+              "min": 0.512,
+              "max": 0.619,
+              "mean": 0.563,
+              "range_percent": 19.0
+            }
+          },
+          "august": {
+            "reference_values": {
+              "BSIMAC": {"value": 0.572, "day": 10, "hour": 7},
+              "CSE": {"value": 0.553, "day": 17, "hour": 6},
+              "DeST": {"value": 0.532, "day": 17, "hour": 5},
+              "EnergyPlus": {"value": 0.479, "day": 17, "hour": 6},
+              "ESP-r": {"value": 0.560, "day": 17, "hour": 6},
+              "NewHASP": {"value": 0.590, "day": 17, "hour": 6},
+              "TRNSYS": {"value": 0.591, "day": 17, "hour": 6}
+            },
+            "statistics": {
+              "min": 0.479,
+              "max": 0.591,
+              "mean": 0.554,
+              "range_percent": 20.3
+            }
+          },
+          "september": {
+            "reference_values": {
+              "BSIMAC": {"value": 1.229, "day": 28, "hour": 24},
+              "CSE": {"value": 1.120, "day": 29, "hour": 1},
+              "DeST": {"value": 1.114, "day": 29, "hour": 2},
+              "EnergyPlus": {"value": 1.130, "day": 28, "hour": 24},
+              "ESP-r": {"value": 1.190, "day": 29, "hour": 1},
+              "NewHASP": {"value": 1.238, "day": 28, "hour": 24},
+              "TRNSYS": {"value": 1.212, "day": 28, "hour": 24}
+            },
+            "statistics": {
+              "min": 1.114,
+              "max": 1.238,
+              "mean": 1.176,
+              "range_percent": 10.6
+            }
+          },
+          "october": {
+            "reference_values": {
+              "BSIMAC": {"value": 1.702, "day": 6, "hour": 7},
+              "CSE": {"value": 1.624, "day": 15, "hour": 6},
+              "DeST": {"value": 1.619, "day": 9, "hour": 5},
+              "EnergyPlus": {"value": 1.682, "day": 15, "hour": 5},
+              "ESP-r": {"value": 1.770, "day": 9, "hour": 6},
+              "NewHASP": {"value": 1.675, "day": 15, "hour": 5},
+              "TRNSYS": {"value": 1.813, "day": 15, "hour": 6}
+            },
+            "statistics": {
+              "min": 1.619,
+              "max": 1.813,
+              "mean": 1.698,
+              "range_percent": 11.4
+            }
+          },
+          "november": {
+            "reference_values": {
+              "BSIMAC": {"value": 3.255, "day": 26, "hour": 8},
+              "CSE": {"value": 2.850, "day": 26, "hour": 8},
+              "DeST": {"value": 2.931, "day": 26, "hour": 7},
+              "EnergyPlus": {"value": 3.106, "day": 26, "hour": 7},
+              "ESP-r": {"value": 3.110, "day": 26, "hour": 7},
+              "NewHASP": {"value": 2.971, "day": 26, "hour": 8},
+              "TRNSYS": {"value": 3.207, "day": 26, "hour": 8}
+            },
+            "statistics": {
+              "min": 2.850,
+              "max": 3.255,
+              "mean": 3.061,
+              "range_percent": 13.2
+            }
+          },
+          "december": {
+            "reference_values": {
+              "BSIMAC": {"value": 3.171, "day": 31, "hour": 24},
+              "CSE": {"value": 2.941, "day": 31, "hour": 24},
+              "DeST": {"value": 2.972, "day": 31, "hour": 23},
+              "EnergyPlus": {"value": 3.204, "day": 31, "hour": 24},
+              "ESP-r": {"value": 3.170, "day": 31, "hour": 24},
+              "NewHASP": {"value": 3.125, "day": 31, "hour": 24},
+              "TRNSYS": {"value": 3.278, "day": 31, "hour": 24}
+            },
+            "statistics": {
+              "min": 2.941,
+              "max": 3.278,
+              "mean": 3.123,
+              "range_percent": 10.8
+            }
+          }
+        }
+      },
+      
+      "peak_cooling_loads": {
+        "case": "600",
+        "unit": "kW",
+        "category": "monthly_peak_loads",
+        "required_output": false,
+        "months": {
+          "january": {
+            "reference_values": {
+              "BSIMAC": {"value": 5.650, "day": 22, "hour": 15},
+              "CSE": {"value": 6.481, "day": 22, "hour": 14},
+              "DeST": {"value": 5.422, "day": 22, "hour": 14},
+              "EnergyPlus": {"value": 6.352, "day": 22, "hour": 14},
+              "ESP-r": {"value": 6.190, "day": 22, "hour": 14},
+              "NewHASP": {"value": 6.835, "day": 22, "hour": 14},
+              "TRNSYS": {"value": 6.046, "day": 22, "hour": 14}
+            },
+            "statistics": {
+              "min": 5.422,
+              "max": 6.835,
+              "mean": 6.139,
+              "range_percent": 23.0
+            }
+          },
+          "february": {
+            "reference_values": {
+              "BSIMAC": {"value": 4.921, "day": 15, "hour": 15},
+              "CSE": {"value": 5.393, "day": 15, "hour": 14},
+              "DeST": {"value": 4.444, "day": 15, "hour": 14},
+              "EnergyPlus": {"value": 5.537, "day": 2, "hour": 14},
+              "ESP-r": {"value": 5.420, "day": 2, "hour": 14},
+              "NewHASP": {"value": 5.866, "day": 2, "hour": 14},
+              "TRNSYS": {"value": 5.155, "day": 2, "hour": 14}
+            },
+            "statistics": {
+              "min": 4.444,
+              "max": 5.866,
+              "mean": 5.248,
+              "range_percent": 27.1
+            }
+          },
+          "march": {
+            "reference_values": {
+              "BSIMAC": {"value": 4.458, "day": 24, "hour": 14},
+              "CSE": {"value": 5.148, "day": 24, "hour": 13},
+              "DeST": {"value": 4.252, "day": 9, "hour": 14},
+              "EnergyPlus": {"value": 5.009, "day": 9, "hour": 14},
+              "ESP-r": {"value": 5.040, "day": 9, "hour": 14},
+              "NewHASP": {"value": 5.798, "day": 9, "hour": 14},
+              "TRNSYS": {"value": 4.740, "day": 9, "hour": 14}
+            },
+            "statistics": {
+              "min": 4.252,
+              "max": 5.798,
+              "mean": 4.921,
+              "range_percent": 31.4
+            }
+          },
+          "april": {
+            "reference_values": {
+              "BSIMAC": {"value": 3.473, "day": 12, "hour": 14},
+              "CSE": {"value": 4.015, "day": 27, "hour": 14},
+              "DeST": {"value": 3.600, "day": 7, "hour": 14},
+              "EnergyPlus": {"value": 3.931, "day": 12, "hour": 14},
+              "ESP-r": {"value": 4.040, "day": 12, "hour": 14},
+              "NewHASP": {"value": 5.006, "day": 7, "hour": 14},
+              "TRNSYS": {"value": 3.803, "day": 12, "hour": 14}
+            },
+            "statistics": {
+              "min": 3.473,
+              "max": 5.006,
+              "mean": 3.981,
+              "range_percent": 38.5
+            }
+          },
+          "may": {
+            "reference_values": {
+              "BSIMAC": {"value": 2.774, "day": 10, "hour": 14},
+              "CSE": {"value": 3.080, "day": 21, "hour": 14},
+              "DeST": {"value": 2.894, "day": 10, "hour": 14},
+              "EnergyPlus": {"value": 3.086, "day": 10, "hour": 13},
+              "ESP-r": {"value": 3.100, "day": 10, "hour": 14},
+              "NewHASP": {"value": 3.917, "day": 10, "hour": 13},
+              "TRNSYS": {"value": 3.040, "day": 21, "hour": 14}
+            },
+            "statistics": {
+              "min": 2.774,
+              "max": 3.917,
+              "mean": 3.127,
+              "range_percent": 36.5
+            }
+          },
+          "june": {
+            "reference_values": {
+              "BSIMAC": {"value": 3.253, "day": 26, "hour": 15},
+              "CSE": {"value": 3.249, "day": 13, "hour": 13},
+              "DeST": {"value": 3.067, "day": 14, "hour": 14},
+              "EnergyPlus": {"value": 3.449, "day": 13, "hour": 13},
+              "ESP-r": {"value": 3.430, "day": 13, "hour": 14},
+              "NewHASP": {"value": 3.792, "day": 13, "hour": 14},
+              "TRNSYS": {"value": 3.379, "day": 13, "hour": 13}
+            },
+            "statistics": {
+              "min": 3.067,
+              "max": 3.792,
+              "mean": 3.374,
+              "range_percent": 21.5
+            }
+          },
+          "july": {
+            "reference_values": {
+              "BSIMAC": {"value": 3.319, "day": 17, "hour": 14},
+              "CSE": {"value": 3.290, "day": 17, "hour": 14},
+              "DeST": {"value": 3.155, "day": 29, "hour": 13},
+              "EnergyPlus": {"value": 3.628, "day": 17, "hour": 14},
+              "ESP-r": {"value": 3.640, "day": 17, "hour": 14},
+              "NewHASP": {"value": 3.998, "day": 30, "hour": 13},
+              "TRNSYS": {"value": 3.497, "day": 17, "hour": 14}
+            },
+            "statistics": {
+              "min": 3.155,
+              "max": 3.998,
+              "mean": 3.504,
+              "range_percent": 24.1
+            }
+          },
+          "august": {
+            "reference_values": {
+              "BSIMAC": {"value": 4.192, "day": 26, "hour": 14},
+              "CSE": {"value": 4.120, "day": 8, "hour": 14},
+              "DeST": {"value": 4.038, "day": 29, "hour": 13},
+              "EnergyPlus": {"value": 4.672, "day": 26, "hour": 14},
+              "ESP-r": {"value": 4.700, "day": 29, "hour": 14},
+              "NewHASP": {"value": 5.227, "day": 27, "hour": 13},
+              "TRNSYS": {"value": 4.651, "day": 27, "hour": 13}
+            },
+            "statistics": {
+              "min": 4.038,
+              "max": 5.227,
+              "mean": 4.514,
+              "range_percent": 26.3
+            }
+          },
+          "september": {
+            "reference_values": {
+              "BSIMAC": {"value": 5.086, "day": 30, "hour": 14},
+              "CSE": {"value": 5.450, "day": 2, "hour": 14},
+              "DeST": {"value": 4.911, "day": 30, "hour": 13},
+              "EnergyPlus": {"value": 5.715, "day": 30, "hour": 13},
+              "ESP-r": {"value": 5.580, "day": 30, "hour": 14},
+              "NewHASP": {"value": 6.096, "day": 17, "hour": 13},
+              "TRNSYS": {"value": 5.420, "day": 30, "hour": 14}
+            },
+            "statistics": {
+              "min": 4.911,
+              "max": 6.096,
+              "mean": 5.465,
+              "range_percent": 21.7
+            }
+          },
+          "october": {
+            "reference_values": {
+              "BSIMAC": {"value": 5.577, "day": 18, "hour": 14},
+              "CSE": {"value": 6.270, "day": 1, "hour": 13},
+              "DeST": {"value": 5.278, "day": 10, "hour": 13},
+              "EnergyPlus": {"value": 6.222, "day": 18, "hour": 14},
+              "ESP-r": {"value": 6.070, "day": 18, "hour": 14},
+              "NewHASP": {"value": 6.264, "day": 10, "hour": 13},
+              "TRNSYS": {"value": 5.923, "day": 18, "hour": 14}
+            },
+            "statistics": {
+              "min": 5.278,
+              "max": 6.270,
+              "mean": 5.943,
+              "range_percent": 16.7
+            }
+          },
+          "november": {
+            "reference_values": {
+              "BSIMAC": {"value": 5.476, "day": 28, "hour": 14},
+              "CSE": {"value": 6.149, "day": 28, "hour": 13},
+              "DeST": {"value": 5.229, "day": 29, "hour": 13},
+              "EnergyPlus": {"value": 6.194, "day": 28, "hour": 13},
+              "ESP-r": {"value": 6.030, "day": 28, "hour": 14},
+              "NewHASP": {"value": 6.422, "day": 29, "hour": 13},
+              "TRNSYS": {"value": 5.824, "day": 28, "hour": 14}
+            },
+            "statistics": {
+              "min": 5.229,
+              "max": 6.422,
+              "mean": 5.903,
+              "range_percent": 20.2
+            }
+          },
+          "december": {
+            "reference_values": {
+              "BSIMAC": {"value": 5.537, "day": 1, "hour": 14},
+              "CSE": {"value": 6.450, "day": 1, "hour": 14},
+              "DeST": {"value": 5.294, "day": 1, "hour": 13},
+              "EnergyPlus": {"value": 6.251, "day": 1, "hour": 14},
+              "ESP-r": {"value": 6.120, "day": 1, "hour": 14},
+              "NewHASP": {"value": 6.413, "day": 1, "hour": 14},
+              "TRNSYS": {"value": 5.942, "day": 1, "hour": 14}
+            },
+            "statistics": {
+              "min": 5.294,
+              "max": 6.450,
+              "mean": 6.001,
+              "range_percent": 19.3
+            }
+          }
+        }
+      }
+    }
+  }

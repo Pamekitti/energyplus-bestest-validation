@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "simulation_tool": "EnergyPlus",
+    "version": "25.1.0",
+    "date_run": "2025-11-07"
+  },
+  "case_600": {
+    "annual_heating_load": 4.255,
+    "annual_sensible_cooling_load": 6.301,
+    "peak_heating_load": 3.174,
+    "peak_sensible_cooling_load": 6.502,
+    "annual_incident_solar_horizontal": 1665,
+    "annual_incident_solar_north": 438,
+    "annual_incident_solar_east": 1062,
+    "annual_incident_solar_south": 1371,
+    "annual_incident_solar_west": 967,
+    "annual_transmitted_solar_south": 806,
+    "transmissivity_coefficient_south": 0.588,
+    "monthly_heating_loads": {
+      "january": 700.7007733283336,
+      "february": 670.2782280479049,
+      "march": 464.0103263943025,
+      "april": 499.35395742351676,
+      "may": 134.27981831467426,
+      "june": 10.25687643332474,
+      "july": 12.201839679355844,
+      "august": 6.87014908283893,
+      "september": 73.51848165841652,
+      "october": 343.56645744311663,
+      "november": 615.0391239543785,
+      "december": 724.5879391960706
+    },
+    "monthly_cooling_loads": {
+      "january": 548.3304790270537,
+      "february": 410.7290313360121,
+      "march": 511.5895801299435,
+      "april": 257.1108184969559,
+      "may": 362.4104233545501,
+      "june": 561.3155443513821,
+      "july": 558.6799462152082,
+      "august": 668.9095916996719,
+      "september": 757.6472870785209,
+      "october": 701.5645833998555,
+      "november": 459.0503526349487,
+      "december": 503.26300024431396
+    }
+  },
+  "case_600FF": {
+    "free_float_mean_temperature": 25.4,
+    "free_float_max_temperature": 64.6,
+    "free_float_min_temperature": -12.0
+  }
+}
