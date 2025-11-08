@@ -172,15 +172,11 @@
     ;                        !- Use EnergyPlus defaults for absorptance
 
 ! Floor Insulation Material - BESTEST Spec
-! Insulation: k=0.040, thickness=1.003, R=25.075 m2-K/W
-  Material,
+! Insulation: R=25.075 m2-K/W
+  Material:NoMass,
     Floor Insulation,        !- Name
     Rough,                   !- Roughness
-    1.003,                   !- Thickness {m}
-    0.040,                   !- Conductivity {W/m-K}
-    12.0,                    !- Density {kg/m3}
-    840.0,                   !- Specific Heat {J/kg-K}
-    ;                        !- Use EnergyPlus defaults for absorptance
+    25.075;                  !- Thermal Resistance {m2-K/W}
 
 ! =========== CONSTRUCTIONS ===========
 
@@ -207,10 +203,10 @@
     Clear Glass 3mm,         !- Name
     SpectralAverage,         !- Optical Data Type
     ,                        !- Window Glass Spectral Data Set Name
-    0.003048,                !- Thickness {m} (3.048mm as per BESTEST)
+    0.003048,                !- Thickness {m}
     0.834,                   !- Solar Transmittance at Normal Incidence
-    0.075,                   !- Front Side Solar Reflectance at Normal Incidence
-    0.075,                   !- Back Side Solar Reflectance at Normal Incidence
+    0.08,                    !- Front Side Solar Reflectance at Normal Incidence
+    0.08,                    !- Back Side Solar Reflectance at Normal Incidence
     0.90,                    !- Visible Transmittance at Normal Incidence
     0.08,                    !- Front Side Visible Reflectance at Normal Incidence
     0.08,                    !- Back Side Visible Reflectance at Normal Incidence

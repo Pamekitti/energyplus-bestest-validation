@@ -1,65 +1,65 @@
 Parametric Analysis Results
 
-Base case: 4.139 MWh heating, 6.190 MWh cooling
+Base case: 4.232 MWh heating, 6.283 MWh cooling
 
 Timestep (steps/hour):
-  1 step/hr: 3.870 MWh (-6.5%) / 5.905 MWh (-4.6%)
-  6 steps/hr: 4.163 MWh (+0.6%) / 6.218 MWh (+0.5%)
-  10 steps/hr: 4.176 MWh (+0.9%) / 6.234 MWh (+0.7%)
-  20 steps/hr: 4.187 MWh (+1.2%) / 6.246 MWh (+0.9%)
+  1 step/hr: 3.956 MWh (-6.5%) / 5.988 MWh (-4.7%)
+  6 steps/hr: 4.257 MWh (+0.6%) / 6.312 MWh (+0.5%)
+  10 steps/hr: 4.274 MWh (+1.0%) / 6.332 MWh (+0.8%)
+  20 steps/hr: 4.285 MWh (+1.3%) / 6.346 MWh (+1.0%)
 
 Shadow Frequency (days):
-  7 days: 4.138 MWh (-0.0%) / 6.191 MWh (+0.0%)
-  20 days: 4.137 MWh (-0.0%) / 6.188 MWh (-0.0%)
-  30 days: 4.142 MWh (+0.1%) / 6.184 MWh (-0.1%)
+  7 days: 4.231 MWh (-0.0%) / 6.284 MWh (+0.0%)
+  20 days: 4.230 MWh (-0.0%) / 6.280 MWh (-0.0%)
+  30 days: 4.235 MWh (+0.1%) / 6.276 MWh (-0.1%)
 
 Shadow Calculation:
-  PixelCounting: 4.139 MWh (+0.0%) / 6.190 MWh (-0.0%)
-  Timestep Update: 4.137 MWh (-0.0%) / 6.188 MWh (-0.0%)
+  PixelCounting: 4.232 MWh (+0.0%) / 6.283 MWh (-0.0%)
+  Timestep Update: 4.230 MWh (-0.0%) / 6.280 MWh (-0.0%)
 
 Solar Distribution:
-  MinimalShadowing: 4.139 MWh (+0.0%) / 6.190 MWh (+0.0%)
-  FullExterior: 4.142 MWh (+0.1%) / 6.173 MWh (-0.3%)
-  FullExt+Reflections: 4.150 MWh (+0.3%) / 6.105 MWh (-1.4%)
+  MinimalShadowing: 4.232 MWh (+0.0%) / 6.283 MWh (+0.0%)
+  FullExterior: 4.234 MWh (+0.0%) / 6.264 MWh (-0.3%)
+  FullExt+Reflections: 4.243 MWh (+0.3%) / 6.198 MWh (-1.4%)
 
 Terrain Type:
-  Suburbs: 4.110 MWh (-0.7%) / 6.540 MWh (+5.7%)
-  City: 4.097 MWh (-1.0%) / 6.936 MWh (+12.0%)
+  Suburbs: 4.206 MWh (-0.6%) / 6.632 MWh (+5.6%)
+  City: 4.196 MWh (-0.9%) / 7.028 MWh (+11.9%)
 
 Convergence Tolerances:
-  Loads: 0.01W: 4.139 MWh (+0.0%) / 6.190 MWh (+0.0%)
-  Loads: 0.1W: 4.139 MWh (-0.0%) / 6.190 MWh (+0.0%)
-  Temp: 0.2C: 4.139 MWh (+0.0%) / 6.190 MWh (+0.0%)
-  Temp: 0.5C: 4.139 MWh (+0.0%) / 6.190 MWh (+0.0%)
+  Loads: 0.01W: 4.232 MWh (+0.0%) / 6.283 MWh (+0.0%)
+  Loads: 0.1W: 4.232 MWh (-0.0%) / 6.283 MWh (-0.0%)
+  Temp: 0.2C: 4.232 MWh (+0.0%) / 6.283 MWh (+0.0%)
+  Temp: 0.5C: 4.232 MWh (+0.0%) / 6.283 MWh (+0.0%)
 
 Warmup Days:
-  Max: 15: 4.139 MWh (+0.0%) / 6.190 MWh (-0.0%)
-  Max: 40: 4.139 MWh (+0.0%) / 6.190 MWh (-0.0%)
-  Min: 3: 4.139 MWh (+0.0%) / 6.190 MWh (+0.0%)
-  Min: 10: 4.139 MWh (+0.0%) / 6.190 MWh (-0.0%)
+  Max: 15: 4.232 MWh (+0.0%) / 6.283 MWh (-0.0%)
+  Max: 40: 4.232 MWh (+0.0%) / 6.283 MWh (-0.0%)
+  Min: 3: 4.232 MWh (+0.0%) / 6.283 MWh (+0.0%)
+  Min: 10: 4.232 MWh (+0.0%) / 6.283 MWh (+0.0%)
 
 Heat Balance Algorithm:
-  ConductionFiniteDiff: 4.194 MWh (+1.3%) / 6.255 MWh (+1.0%)
+  ConductionFiniteDiff: 4.289 MWh (+1.3%) / 6.349 MWh (+1.1%)
 
 Inside Convection Algorithm:
-  Simple: 4.555 MWh (+10.1%) / 6.427 MWh (+3.8%)
-  CeilingDiffuser: 4.665 MWh (+12.7%) / 7.245 MWh (+17.1%)
-  Adaptive: 3.843 MWh (-7.1%) / 5.756 MWh (-7.0%)
+  Simple: 4.645 MWh (+9.8%) / 6.506 MWh (+3.5%)
+  CeilingDiffuser: 4.751 MWh (+12.3%) / 7.317 MWh (+16.5%)
+  Adaptive: 3.935 MWh (-7.0%) / 5.854 MWh (-6.8%)
 
 Outside Convection Algorithm:
-  SimpleCombined: 4.059 MWh (-1.9%) / 5.850 MWh (-5.5%)
-  TARP: 4.138 MWh (-0.0%) / 6.507 MWh (+5.1%)
-  MoWiTT: 4.154 MWh (+0.4%) / 6.539 MWh (+5.6%)
-  Adaptive: 4.078 MWh (-1.5%) / 6.254 MWh (+1.0%)
+  SimpleCombined: 4.146 MWh (-2.0%) / 5.945 MWh (-5.4%)
+  TARP: 4.234 MWh (+0.1%) / 6.599 MWh (+5.0%)
+  MoWiTT: 4.249 MWh (+0.4%) / 6.633 MWh (+5.6%)
+  Adaptive: 4.172 MWh (-1.4%) / 6.344 MWh (+1.0%)
 
 Impact summary (max change in each parameter group):
-  Timestep (steps/hour): 6.5% heating, 4.6% cooling
+  Timestep (steps/hour): 6.5% heating, 4.7% cooling
   Shadow Frequency (days): 0.1% heating, 0.1% cooling
   Shadow Calculation: 0.0% heating, 0.0% cooling
   Solar Distribution: 0.3% heating, 1.4% cooling
-  Terrain Type: 1.0% heating, 12.0% cooling
+  Terrain Type: 0.9% heating, 11.9% cooling
   Convergence Tolerances: 0.0% heating, 0.0% cooling
   Warmup Days: 0.0% heating, 0.0% cooling
-  Heat Balance Algorithm: 1.3% heating, 1.0% cooling
-  Inside Convection Algorithm: 12.7% heating, 17.1% cooling
-  Outside Convection Algorithm: 1.9% heating, 5.6% cooling
+  Heat Balance Algorithm: 1.3% heating, 1.1% cooling
+  Inside Convection Algorithm: 12.3% heating, 16.5% cooling
+  Outside Convection Algorithm: 2.0% heating, 5.6% cooling

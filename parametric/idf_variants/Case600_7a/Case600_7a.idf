@@ -171,14 +171,10 @@ Material,
     900,                      !- Specific Heat
     ;                         !- Thermal Absorptance
 
-Material,
+Material:NoMass,
     Floor Insulation,         !- Name
     Rough,                    !- Roughness
-    1.003,                    !- Thickness
-    0.04,                     !- Conductivity
-    12,                       !- Density
-    840,                      !- Specific Heat
-    ;                         !- Thermal Absorptance
+    25.075;                   !- Thermal Resistance
 
 WindowMaterial:Glazing,
     Clear Glass 3mm,          !- Name
@@ -186,8 +182,8 @@ WindowMaterial:Glazing,
     ,                         !- Window Glass Spectral Data Set Name
     0.003048,                 !- Thickness
     0.834,                    !- Solar Transmittance at Normal Incidence
-    0.075,                    !- Front Side Solar Reflectance at Normal Incidence
-    0.075,                    !- Back Side Solar Reflectance at Normal Incidence
+    0.08,                     !- Front Side Solar Reflectance at Normal Incidence
+    0.08,                     !- Back Side Solar Reflectance at Normal Incidence
     0.9,                      !- Visible Transmittance at Normal Incidence
     0.08,                     !- Front Side Visible Reflectance at Normal Incidence
     0.08,                     !- Back Side Visible Reflectance at Normal Incidence
