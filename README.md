@@ -107,8 +107,3 @@ CONFIG = {
     # ...
 }
 ```
-
-Use the corresponding IDF file from `idf_files/` (files are version-specific).
-# energyplus-bestest-validation
-# energyplus-bestest-validation
-# energyplus-bestest-validation
