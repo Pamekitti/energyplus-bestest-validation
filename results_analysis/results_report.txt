@@ -8,16 +8,16 @@ Summary: 14/14 metrics within acceptable range
 
 Energy Performance (10/10)
 ------------------
-✓ Heating Load: 4.255 MWh [ref: 3.993-4.504]
-✓ Sensible Cooling Load: 6.301 MWh [ref: 5.432-6.976]
-✓ Heating Load: 3.174 kW [ref: 3.020-3.359]
-✓ Sensible Cooling Load: 6.502 kW [ref: 5.422-6.835]
+✓ Heating Load: 4.139 MWh [ref: 3.993-4.504]
+✓ Sensible Cooling Load: 6.190 MWh [ref: 5.432-6.976]
+✓ Heating Load: 3.123 kW [ref: 3.020-3.359]
+✓ Sensible Cooling Load: 6.445 kW [ref: 5.422-6.835]
 ✓ Incident Solar Horizontal: 1665.000 kWh/m2 [ref: 1663.000-1670.000]
 ✓ Incident Solar North: 438.000 kWh/m2 [ref: 399.000-477.000]
 ✓ Incident Solar East: 1062.000 kWh/m2 [ref: 1017.000-1068.000]
 ✓ Incident Solar South: 1371.000 kWh/m2 [ref: 1291.000-1387.000]
-✓ Incident Solar West: 967.000 kWh/m2 [ref: 903.000-997.000]
-✓ Transmitted Solar South: 806.000 kWh/m2 [ref: 804.000-826.000]
+✓ Incident Solar West: 966.000 kWh/m2 [ref: 903.000-997.000]
+✓ Transmitted Solar South: 804.000 kWh/m2 [ref: 804.000-826.000]
 
 Solar Radiation (7/7)
 ---------------
@@ -25,19 +25,19 @@ Solar Radiation (7/7)
 ✓ Incident Solar North: 438.000 kWh/m2 [ref: 399.000-477.000]
 ✓ Incident Solar East: 1062.000 kWh/m2 [ref: 1017.000-1068.000]
 ✓ Incident Solar South: 1371.000 kWh/m2 [ref: 1291.000-1387.000]
-✓ Incident Solar West: 967.000 kWh/m2 [ref: 903.000-997.000]
-✓ Transmitted Solar South: 806.000 kWh/m2 [ref: 804.000-826.000]
-✓ Transmissivity Coefficient South: 0.588 dimensionless [ref: 0.587-0.627]
+✓ Incident Solar West: 966.000 kWh/m2 [ref: 903.000-997.000]
+✓ Transmitted Solar South: 804.000 kWh/m2 [ref: 804.000-826.000]
+✓ Transmissivity Coefficient South: 0.587 dimensionless [ref: 0.587-0.627]
 
 Temperature Response (3/3)
 --------------------
-✓ Free Float Mean Temperature: 25.400 °C [ref: 24.300-26.700]
-✓ Free Float Max Temperature: 64.600 °C [ref: 62.400-68.400]
-✓ Free Float Min Temperature: -12.000 °C [ref: -13.800--9.900]
+✓ Free Float Mean Temperature: 25.500 °C [ref: 24.300-26.700]
+✓ Free Float Max Temperature: 63.300 °C [ref: 62.400-68.400]
+✓ Free Float Min Temperature: -11.600 °C [ref: -13.800--9.900]
 
 Performance Summary
 -------------------
-Annual loads: 4.25 MWh heating, 6.30 MWh cooling
-Peak loads: 3.17 kW heating, 6.50 kW cooling
-Load factor heating: 15.3%
-Load factor cooling: 11.1%
+Annual loads: 4.14 MWh heating, 6.19 MWh cooling
+Peak loads: 3.12 kW heating, 6.45 kW cooling
+Load factor heating: 15.1%
+Load factor cooling: 11.0%

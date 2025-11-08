@@ -48,8 +48,7 @@
   ShadowCalculation,
     PolygonClipping,         !- Shading Calculation Method
     Periodic,                !- Shading Calculation Update Frequency Method  
-    1,                       !- Shading Calculation Update Frequency
-    15000;                   !- Maximum Figures in Shadow Overlap Calculations
+    20;                      !- Shading Calculation Update Frequency
 
   Building,
     BESTEST Case 600,        !- Name
@@ -57,13 +56,10 @@
     Country,                 !- Terrain
     ,                        !- Loads Convergence Tolerance Value {W}
     ,                        !- Temperature Convergence Tolerance Value {deltaC}
-    FullInteriorAndExterior,        !- Solar Distribution
-    30,                      !- Maximum Number of Warmup Days
-    6;                       !- Minimum Number of Warmup Days
+    FullExterior;            !- Solar Distribution
 
   HeatBalanceAlgorithm,
-    ConductionTransferFunction,
-    200;                     !- Surface Temperature Upper Limit {C}
+    ConductionTransferFunction;
 
   SurfaceConvectionAlgorithm:Inside,TARP;
 
@@ -115,10 +111,13 @@
     840.0,                   !- Specific Heat {J/kg-K}
     ;                        !- Use EnergyPlus defaults for absorptance
 
-  Material:NoMass,
+  Material,
     Wall Fiberglass Quilt,   !- Name
     Rough,                   !- Roughness
-    1.65,                    !- Thermal Resistance {m2-K/W}
+    0.066,                   !- Thickness {m}
+    0.040,                   !- Conductivity {W/m-K}
+    12.0,                    !- Density {kg/m3}
+    840.0,                   !- Specific Heat {J/kg-K}
     ;                        !- Use EnergyPlus defaults for absorptance
 
   Material,
@@ -153,10 +152,13 @@
     ;                        !- Use EnergyPlus defaults for absorptance
 
 ! Fiberglass: k=0.040, thickness=0.1118, density=12, Cp=840 per BESTEST
-  Material:NoMass,
+  Material,
     Roof Fiberglass Quilt,   !- Name
     Rough,                   !- Roughness
-    2.795,                   !- Thermal Resistance {m2-K/W} (0.1118/0.040)
+    0.1118,                  !- Thickness {m}
+    0.040,                   !- Conductivity {W/m-K}
+    12.0,                    !- Density {kg/m3}
+    840.0,                   !- Specific Heat {J/kg-K}
     ;                        !- Use EnergyPlus defaults for absorptance
 
 ! Wood siding: k=0.140, thickness=0.019, density=530, Cp=900
@@ -171,10 +173,13 @@
 
 ! Floor Insulation Material - BESTEST Spec
 ! Insulation: k=0.040, thickness=1.003, R=25.075 m2-K/W
-  Material:NoMass,
+  Material,
     Floor Insulation,        !- Name
     Rough,                   !- Roughness
-    25.075,                  !- Thermal Resistance {m2-K/W} (1.003/0.040)
+    1.003,                   !- Thickness {m}
+    0.040,                   !- Conductivity {W/m-K}
+    12.0,                    !- Density {kg/m3}
+    840.0,                   !- Specific Heat {J/kg-K}
     ;                        !- Use EnergyPlus defaults for absorptance
 
 ! =========== CONSTRUCTIONS ===========
@@ -204,11 +209,11 @@
     ,                        !- Window Glass Spectral Data Set Name
     0.003048,                !- Thickness {m} (3.048mm as per BESTEST)
     0.834,                   !- Solar Transmittance at Normal Incidence
-    0.07846,                 !- Front Side Solar Reflectance at Normal Incidence
-    0.07846,                 !- Back Side Solar Reflectance at Normal Incidence
-    0.91325,                 !- Visible Transmittance at Normal Incidence
-    0.082,                   !- Front Side Visible Reflectance at Normal Incidence
-    0.082,                   !- Back Side Visible Reflectance at Normal Incidence
+    0.075,                   !- Front Side Solar Reflectance at Normal Incidence
+    0.075,                   !- Back Side Solar Reflectance at Normal Incidence
+    0.90,                    !- Visible Transmittance at Normal Incidence
+    0.08,                    !- Front Side Visible Reflectance at Normal Incidence
+    0.08,                    !- Back Side Visible Reflectance at Normal Incidence
     0.0,                     !- Infrared Transmittance at Normal Incidence
     0.84,                    !- Front Side Infrared Hemispherical Emissivity
     0.84,                    !- Back Side Infrared Hemispherical Emissivity
@@ -451,11 +456,6 @@
 ! =========== HVAC SYSTEM ===========
 ! Case 600FF: No HVAC system - free-float temperatures
 
-!-   ===========  ALL OBJECTS IN CLASS: OUTPUT:VARIABLEDICTIONARY ===========
-
-Output:VariableDictionary,
-    IDF;
-
 !-   ===========  ALL OBJECTS IN CLASS: OUTPUT:VARIABLE ===========
 
 ! Zone Temperature (for Case 600FF: mean, min, max with timestamps)
@@ -478,22 +478,8 @@ Output:Variable,
 
 ! =========== OUTPUT REPORTS ===========
 
-  Output:Surfaces:Drawing,DXF;
-
-  Output:SQLite,SimpleAndTabular;
-
-  Output:Constructions,Constructions;
-
   OutputControl:Table:Style,
     HTML;                    !- Column Separator
 
   Output:Table:SummaryReports,
     AllSummary;              !- Report 1 Name
-
-  Output:Table:Monthly,
-    Building Energy Performance,  !- Name
-    2,                       !- Digits After Decimal
-    Zone Ideal Loads Zone Total Heating Energy,  !- Variable or Meter 1 Name
-    SumOrAverage,            !- Aggregation Type for Variable or Meter 1
-    Zone Ideal Loads Zone Sensible Cooling Energy,  !- Variable or Meter 2 Name
-    SumOrAverage;            !- Aggregation Type for Variable or Meter 2
