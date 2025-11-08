@@ -5,7 +5,7 @@ STUDY_CASES = {
     '1d': {'description': 'Timestep: 20 steps/hour', 'modifications': {'TIMESTEP': {'fields': [0], 'values': [20]}}},
     
     '2a': {'description': 'Shadow calc frequency: 7 days', 'modifications': {'SHADOWCALCULATION': {'fields': [2], 'values': [7]}}},
-    '2b': {'description': 'Shadow calc frequency: 20 days', 'modifications': {'SHADOWCALCULATION': {'fields': [2], 'values': [20]}}},
+    '2b': {'description': 'Shadow calc frequency: 1 day', 'modifications': {'SHADOWCALCULATION': {'fields': [2], 'values': [1]}}},  # Changed from 20 to 1 since base is now 20
     '2c': {'description': 'Shadow calc frequency: 30 days', 'modifications': {'SHADOWCALCULATION': {'fields': [2], 'values': [30]}}},
     
     '3a': {'description': 'Shadow method: PixelCounting', 'modifications': {'SHADOWCALCULATION': {'fields': [0], 'values': ['PixelCounting']}}},
@@ -13,7 +13,7 @@ STUDY_CASES = {
     '4a': {'description': 'Shadow update: Timestep', 'modifications': {'SHADOWCALCULATION': {'fields': [1], 'values': ['Timestep']}}},
     
     '5a': {'description': 'Solar: MinimalShadowing', 'modifications': {'BUILDING': {'fields': [5], 'values': ['MinimalShadowing']}}},
-    '5b': {'description': 'Solar: FullExterior', 'modifications': {'BUILDING': {'fields': [5], 'values': ['FullExterior']}}},
+    '5b': {'description': 'Solar: FullInteriorAndExterior', 'modifications': {'BUILDING': {'fields': [5], 'values': ['FullInteriorAndExterior']}}},  # Changed since base is now FullExterior
     '5c': {'description': 'Solar: FullExtWithReflections', 'modifications': {'BUILDING': {'fields': [5], 'values': ['FullExteriorWithReflections']}}},
     
     '6a': {'description': 'Terrain: Suburbs', 'modifications': {'BUILDING': {'fields': [2], 'values': ['Suburbs']}}},
@@ -25,11 +25,11 @@ STUDY_CASES = {
     '8a': {'description': 'Temp tolerance: 0.2C', 'modifications': {'BUILDING': {'fields': [4], 'values': [0.2]}}},
     '8b': {'description': 'Temp tolerance: 0.5C', 'modifications': {'BUILDING': {'fields': [4], 'values': [0.5]}}},
     
-    '9a': {'description': 'Max warmup: 15 days', 'modifications': {'BUILDING': {'fields': [6], 'values': [15]}}},
-    '9b': {'description': 'Max warmup: 40 days', 'modifications': {'BUILDING': {'fields': [6], 'values': [40]}}},
+    '9a': {'description': 'Max warmup: 15 days', 'modifications': {'BUILDING': {'fields': [6, 7], 'values': [15, 6]}}},  # Add both max(15) and min(6) warmup
+    '9b': {'description': 'Max warmup: 40 days', 'modifications': {'BUILDING': {'fields': [6, 7], 'values': [40, 6]}}},  # Add both max(40) and min(6) warmup
     
-    '10a': {'description': 'Min warmup: 3 days', 'modifications': {'BUILDING': {'fields': [7], 'values': [3]}}},
-    '10b': {'description': 'Min warmup: 10 days', 'modifications': {'BUILDING': {'fields': [7], 'values': [10]}}},
+    '10a': {'description': 'Min warmup: 3 days', 'modifications': {'BUILDING': {'fields': [6, 7], 'values': [30, 3]}}},  # Add both max(30) and min(3) warmup
+    '10b': {'description': 'Min warmup: 10 days', 'modifications': {'BUILDING': {'fields': [6, 7], 'values': [30, 10]}}},  # Add both max(30) and min(10) warmup
     
     '11a': {'description': 'Heat balance: ConductionFiniteDifference', 'modifications': {'HEATBALANCEALGORITHM': {'fields': [0], 'values': ['ConductionFiniteDifference']}}},
     
@@ -46,8 +46,8 @@ STUDY_CASES = {
 }
 
 CONFIG = {
-    'base_case': 'idf_files/Case600_EnergyPlus-9-4-0.idf',
+    'base_case': 'idf_files/Case600_EnergyPlus-25-1-0.idf',  # Updated to use modified 25.1.0 version
     'weather_file': 'weather_files/BESTEST.epw',
-    'energyplus_exe': '/Applications/EnergyPlus-9-4-0/energyplus',
+    'energyplus_exe': '/Applications/EnergyPlus-25-1-0/energyplus',  # Updated to match version
     'max_parallel': 4
 }

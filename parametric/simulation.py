@@ -2,98 +2,81 @@ import subprocess
 import concurrent.futures
 from pathlib import Path
 import shutil
+from eppy.modeleditor import IDF
 
 from .config import STUDY_CASES, CONFIG
 
-def create_variant_idf(base_content, variant_id, variant_config):
-    variant_content = base_content
+# Set EnergyPlus IDD file
+IDF.setiddname("/Applications/EnergyPlus-25-1-0/Energy+.idd")
+
+def create_variant_idf(base_idf_path, variant_id, variant_config):
+    # Load IDF using eppy
+    idf = IDF(str(base_idf_path))
     
     for object_type, mod_config in variant_config['modifications'].items():
         fields = mod_config['fields']
         values = mod_config['values']
         
         if object_type == 'TIMESTEP':
-            variant_content = variant_content.replace('Timestep,4;', f'Timestep,{values[0]};')
+            timesteps = idf.idfobjects['TIMESTEP']
+            if timesteps:
+                timesteps[0].Number_of_Timesteps_per_Hour = values[0]
         
         elif object_type == 'SHADOWCALCULATION':
-            lines = variant_content.split('\n')
-            for i, line in enumerate(lines):
-                if line.strip().startswith('ShadowCalculation,'):
-                    shadow_lines = []
-                    for j in range(0, 10):
-                        shadow_lines.append(lines[i+j])
-                        if lines[i+j].strip().endswith(';'):
-                            break
-                    
-                    if fields[0] == 0:
-                        shadow_lines[1] = f'    {values[0]},          !- Shading Calculation Method'
-                    elif fields[0] == 1:
-                        shadow_lines[2] = f'    {values[0]},          !- Shading Calculation Update Frequency Method'
-                    elif fields[0] == 2:
-                        shadow_lines[3] = f'    {values[0]},          !- Shading Calculation Update Frequency'
-                    
-                    for k, new_line in enumerate(shadow_lines):
-                        lines[i+k] = new_line
-                    variant_content = '\n'.join(lines)
-                    break
+            shadows = idf.idfobjects['SHADOWCALCULATION']
+            if shadows:
+                shadow = shadows[0]
+                if fields[0] == 0:  # method
+                    shadow.Shading_Calculation_Method = values[0]
+                elif fields[0] == 1:  # frequency method
+                    shadow.Shading_Calculation_Update_Frequency_Method = values[0]
+                elif fields[0] == 2:  # frequency
+                    shadow.Shading_Calculation_Update_Frequency = values[0]
         
         elif object_type == 'BUILDING':
-            lines = variant_content.split('\n')
-            for i, line in enumerate(lines):
-                if line.strip().startswith('Building,'):
-                    for j in range(1, 15):
-                        if lines[i+j].strip().endswith(';'):
-                            building_lines = lines[i:i+j+1]
-                            break
-                    
-                    if fields[0] == 2:
-                        building_lines[3] = f'    {values[0]},          !- Terrain'
-                    elif fields[0] == 3:
-                        building_lines[4] = f'    {values[0]},          !- Loads Convergence Tolerance Value'
-                    elif fields[0] == 4:
-                        building_lines[5] = f'    {values[0]},          !- Temperature Convergence Tolerance Value'
-                    elif fields[0] == 5:
-                        building_lines[6] = f'    {values[0]},    !- Solar Distribution'
-                    elif fields[0] == 6:
-                        building_lines[7] = f'    {values[0]},          !- Maximum Number of Warmup Days'
-                    elif fields[0] == 7:
-                        building_lines[8] = f'    {values[0]};          !- Minimum Number of Warmup Days'
-                    
-                    lines[i:i+j+1] = building_lines
-                    variant_content = '\n'.join(lines)
-                    break
+            buildings = idf.idfobjects['BUILDING']
+            if buildings:
+                building = buildings[0]
+                for idx, field_idx in enumerate(fields):
+                    if field_idx == 2:  # Terrain
+                        building.Terrain = values[idx]
+                    elif field_idx == 3:  # Loads tolerance
+                        building.Loads_Convergence_Tolerance_Value = values[idx]
+                    elif field_idx == 4:  # Temperature tolerance
+                        building.Temperature_Convergence_Tolerance_Value = values[idx]
+                    elif field_idx == 5:  # Solar Distribution
+                        building.Solar_Distribution = values[idx]
+                    elif field_idx == 6:  # Max warmup days
+                        building.Maximum_Number_of_Warmup_Days = values[idx]
+                    elif field_idx == 7:  # Min warmup days
+                        building.Minimum_Number_of_Warmup_Days = values[idx]
         
         elif object_type == 'HEATBALANCEALGORITHM':
-            variant_content = variant_content.replace(
-                'HeatBalanceAlgorithm,\n    ConductionTransferFunction,',
-                f'HeatBalanceAlgorithm,\n    {values[0]},'
-            )
+            algorithms = idf.idfobjects['HEATBALANCEALGORITHM']
+            if algorithms:
+                algorithms[0].Algorithm = values[0]
         
         elif object_type == 'SURFACECONVECTIONALGORITHM:INSIDE':
-            variant_content = variant_content.replace(
-                'SurfaceConvectionAlgorithm:Inside,TARP;',
-                f'SurfaceConvectionAlgorithm:Inside,{values[0]};'
-            )
+            inside_algs = idf.idfobjects['SURFACECONVECTIONALGORITHM:INSIDE']
+            if inside_algs:
+                inside_algs[0].Algorithm = values[0]
         
         elif object_type == 'SURFACECONVECTIONALGORITHM:OUTSIDE':
-            variant_content = variant_content.replace(
-                'SurfaceConvectionAlgorithm:Outside,DOE-2;',
-                f'SurfaceConvectionAlgorithm:Outside,{values[0]};'
-            )
-        
+            outside_algs = idf.idfobjects['SURFACECONVECTIONALGORITHM:OUTSIDE']
+            if outside_algs:
+                outside_algs[0].Algorithm = values[0]
     
-    return variant_content
+    return idf
 
-def run_single_simulation(variant_id, variant_config, base_content):
+def run_single_simulation(variant_id, variant_config, base_idf_path):
     try:
         parametric_dir = Path.cwd() / "parametric"
         variant_dir = parametric_dir / "idf_variants" / f"Case600_{variant_id}"
         variant_dir.mkdir(exist_ok=True, parents=True)
         variant_file = variant_dir / f"Case600_{variant_id}.idf"
         
-        variant_content = create_variant_idf(base_content, variant_id, variant_config)
-        with open(variant_file, 'w') as f:
-            f.write(variant_content)
+        variant_idf = create_variant_idf(base_idf_path, variant_id, variant_config)
+        variant_idf.save(str(variant_file))
         
         output_dir = parametric_dir / "outputs" / f"Case600_{variant_id}"
         output_dir.mkdir(exist_ok=True, parents=True)
@@ -112,7 +95,7 @@ def run_single_simulation(variant_id, variant_config, base_content):
         else:
             return {'variant': variant_id, 'status': 'failed'}
             
-    except Exception as e:
+    except Exception:
         return {'variant': variant_id, 'status': 'failed'}
 
 def run_simulations():
@@ -129,15 +112,12 @@ def run_simulations():
         print(f"Error: Base IDF not found at {base_idf_path}")
         return []
     
-    with open(base_idf_path, 'r') as f:
-        base_content = f.read()
-    
     print(f"Running {len(STUDY_CASES)} simulations...")
     
     results = []
     with concurrent.futures.ThreadPoolExecutor(max_workers=CONFIG['max_parallel']) as executor:
         future_to_variant = {
-            executor.submit(run_single_simulation, variant_id, config, base_content): variant_id 
+            executor.submit(run_single_simulation, variant_id, config, base_idf_path): variant_id 
             for variant_id, config in STUDY_CASES.items()
         }
         
