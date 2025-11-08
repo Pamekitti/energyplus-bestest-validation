@@ -248,7 +248,6 @@ def main():
         'Case600FF': 'Case600FF_output/eplusout.eso'
     }
     
-    os.makedirs('data', exist_ok=True)
     case600_data = case600ff_data = None
     
     for case_name, eso_file in cases.items():

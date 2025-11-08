@@ -41,6 +41,8 @@ env/
 # EnergyPlus Output
 output/
 output_*/
+Case600_output/
+Case600FF_output/
 *.err
 *.eso
 *.eio
@@ -56,7 +58,6 @@ output_*/
 *.htm
 *.html
 *.tab
-*.txt
 *.sql
 *.epmidf
 *.epjson
