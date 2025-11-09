@@ -1,7 +1,5 @@
 import subprocess
-import concurrent.futures
 from pathlib import Path
-import shutil
 from eppy.modeleditor import IDF
 
 from .config import STUDY_CASES, CONFIG
@@ -115,17 +113,12 @@ def run_simulations():
     print(f"Running {len(STUDY_CASES)} simulations...")
     
     results = []
-    with concurrent.futures.ThreadPoolExecutor(max_workers=CONFIG['max_parallel']) as executor:
-        future_to_variant = {
-            executor.submit(run_single_simulation, variant_id, config, base_idf_path): variant_id 
-            for variant_id, config in STUDY_CASES.items()
-        }
-        
-        for future in concurrent.futures.as_completed(future_to_variant):
-            result = future.result()
-            results.append(result)
-            status = "✓" if result['status'] == 'success' else "✗"
-            print(f"{status} {result['variant']}")
+    for variant_id, config in STUDY_CASES.items():
+        print(f"Running {variant_id}...")
+        result = run_single_simulation(variant_id, config, base_idf_path)
+        results.append(result)
+        status = "✓" if result['status'] == 'success' else "✗"
+        print(f"{status} {result['variant']}")
     
     successful = len([r for r in results if r['status'] == 'success'])
     print(f"Completed {successful}/{len(results)} simulations")
